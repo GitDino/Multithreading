@@ -73,8 +73,8 @@ void *taskFunc(void * param){
 {
     if (!_pthread_btn)
     {
-        _pthread_btn = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 150) * 0.5, (SCREEN_HEIGHT - 44) * 0.5 - 64, 150, 44)];
-        [_pthread_btn setTitle:@"pthread使用方法" forState:UIControlStateNormal];
+        _pthread_btn = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 160) * 0.5, (SCREEN_HEIGHT - 44) * 0.5 - 64, 160, 44)];
+        [_pthread_btn setTitle:@"pthread开线程方法" forState:UIControlStateNormal];
         [_pthread_btn setTitleColor:[UIColor colorWithRed:30 / 255.0 green:144 / 255.0 blue:255 / 255.0 alpha:1.0] forState:UIControlStateNormal];
     }
     return _pthread_btn;
