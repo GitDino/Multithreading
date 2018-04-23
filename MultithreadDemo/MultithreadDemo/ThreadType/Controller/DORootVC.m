@@ -10,7 +10,9 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 #import "DORootVC.h"
+
 #import "DOpthreadVC.h"
+#import "DOThreadVC.h"
 
 #import "DOTypeListTableView.h"
 #import "DOTypeCellModel.h"
@@ -28,11 +30,6 @@
 @implementation DORootVC
 
 #pragma mark - Life Cycle
-- (void)dealloc
-{
-    NSLog(@"%s", __FUNCTION__);
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -92,7 +89,7 @@
     if (!_data_array)
     {
         DOTypeCellModel *cell_model1 = [DOTypeCellModel typeCellModelWithTitle:@"pthread" pushClass:[DOpthreadVC class]];
-        DOTypeCellModel *cell_model2 = [DOTypeCellModel typeCellModelWithTitle:@"NSThread" pushClass:nil];
+        DOTypeCellModel *cell_model2 = [DOTypeCellModel typeCellModelWithTitle:@"NSThread" pushClass:[DOThreadVC class]];
         DOTypeCellModel *cell_model3 = [DOTypeCellModel typeCellModelWithTitle:@"GCD" pushClass:nil];
         DOTypeCellModel *cell_model4 = [DOTypeCellModel typeCellModelWithTitle:@"NSOperation" pushClass:nil];
         
