@@ -14,6 +14,10 @@
 		01A10FA1208E63E700382781 /* MultithreadDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FA0208E63E700382781 /* MultithreadDemoTests.m */; };
 		01A10FAC208E63E700382781 /* MultithreadDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FAB208E63E700382781 /* MultithreadDemoUITests.m */; };
 		01A10FBE208E642100382781 /* DORootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FBD208E642100382781 /* DORootVC.m */; };
+		01A10FC1208E675200382781 /* DOBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FC0208E675200382781 /* DOBaseTableView.m */; };
+		01A10FC7208E69D200382781 /* DOTypeListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FC6208E69D200382781 /* DOTypeListTableView.m */; };
+		01A10FCB208E6F2600382781 /* DOTypeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FCA208E6F2600382781 /* DOTypeCellModel.m */; };
+		01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FCD208E712F00382781 /* DOTypeListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,15 @@
 		01A10FAD208E63E700382781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01A10FBC208E642100382781 /* DORootVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DORootVC.h; sourceTree = "<group>"; };
 		01A10FBD208E642100382781 /* DORootVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DORootVC.m; sourceTree = "<group>"; };
+		01A10FBF208E675200382781 /* DOBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOBaseTableView.h; sourceTree = "<group>"; };
+		01A10FC0208E675200382781 /* DOBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOBaseTableView.m; sourceTree = "<group>"; };
+		01A10FC3208E683400382781 /* BaseTableViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewProtocol.h; sourceTree = "<group>"; };
+		01A10FC5208E69D200382781 /* DOTypeListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypeListTableView.h; sourceTree = "<group>"; };
+		01A10FC6208E69D200382781 /* DOTypeListTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeListTableView.m; sourceTree = "<group>"; };
+		01A10FC9208E6F2600382781 /* DOTypeCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypeCellModel.h; sourceTree = "<group>"; };
+		01A10FCA208E6F2600382781 /* DOTypeCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeCellModel.m; sourceTree = "<group>"; };
+		01A10FCC208E712F00382781 /* DOTypeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypeListCell.h; sourceTree = "<group>"; };
+		01A10FCD208E712F00382781 /* DOTypeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +112,10 @@
 		01A10F86208E63E600382781 /* MultithreadDemo */ = {
 			isa = PBXGroup;
 			children = (
+				01A10FC8208E6EF800382781 /* Model */,
+				01A10FC4208E691900382781 /* View */,
 				01A10FBB208E640F00382781 /* Controller */,
+				01A10FC2208E680F00382781 /* Protocol */,
 				01A10FBA208E63F700382781 /* Bases */,
 				01A10FB9208E63F000382781 /* Resources */,
 			);
@@ -140,6 +156,8 @@
 			children = (
 				01A10F87208E63E600382781 /* AppDelegate.h */,
 				01A10F88208E63E600382781 /* AppDelegate.m */,
+				01A10FBF208E675200382781 /* DOBaseTableView.h */,
+				01A10FC0208E675200382781 /* DOBaseTableView.m */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -151,6 +169,34 @@
 				01A10FBD208E642100382781 /* DORootVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		01A10FC2208E680F00382781 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				01A10FC3208E683400382781 /* BaseTableViewProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		01A10FC4208E691900382781 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01A10FC5208E69D200382781 /* DOTypeListTableView.h */,
+				01A10FC6208E69D200382781 /* DOTypeListTableView.m */,
+				01A10FCC208E712F00382781 /* DOTypeListCell.h */,
+				01A10FCD208E712F00382781 /* DOTypeListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		01A10FC8208E6EF800382781 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01A10FC9208E6F2600382781 /* DOTypeCellModel.h */,
+				01A10FCA208E6F2600382781 /* DOTypeCellModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,9 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A10FC7208E69D200382781 /* DOTypeListTableView.m in Sources */,
 				01A10FBE208E642100382781 /* DORootVC.m in Sources */,
+				01A10FC1208E675200382781 /* DOBaseTableView.m in Sources */,
 				01A10F97208E63E700382781 /* main.m in Sources */,
+				01A10FCB208E6F2600382781 /* DOTypeCellModel.m in Sources */,
 				01A10F89208E63E600382781 /* AppDelegate.m in Sources */,
+				01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
