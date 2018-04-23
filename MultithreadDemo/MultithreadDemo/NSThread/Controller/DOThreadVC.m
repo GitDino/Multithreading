@@ -98,6 +98,16 @@
 - (void)createNSThread3
 {
     [self performSelectorInBackground:@selector(doSomething:) withObject:@"NSThread03"];
+    
+    /** --->以下所列举的 5 个方法，属于线程间通信  <--- **/
+    
+//    - (void)performSelectorOnMainThread:(SEL)aSelector withObject:(nullable id)arg waitUntilDone:(BOOL)wait modes:(nullable NSArray<NSString *> *)array;
+//    - (void)performSelectorOnMainThread:(SEL)aSelector withObject:(nullable id)arg waitUntilDone:(BOOL)wait;
+//
+//    - (void)performSelector:(SEL)aSelector onThread:(NSThread *)thr withObject:(nullable id)arg waitUntilDone:(BOOL)wait modes:(nullable NSArray<NSString *> *)array;
+//    - (void)performSelector:(SEL)aSelector onThread:(NSThread *)thr withObject:(nullable id)arg waitUntilDone:(BOOL)wait;
+//    
+//    - (void)performSelectorInBackground:(SEL)aSelector withObject:(nullable id)arg;
 }
 
 - (void)doSomething:(NSString *) object_str
