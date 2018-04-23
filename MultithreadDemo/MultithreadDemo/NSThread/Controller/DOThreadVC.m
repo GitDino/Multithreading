@@ -36,6 +36,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self configSubViews];
+    
+    [self configAboutBlock];
 }
 
 #pragma mark - Custom Cycle
@@ -43,6 +45,57 @@
 {
     [self.view addSubview:self.thread_tableView];
     [self.thread_tableView refreshData:self.data_array];
+}
+
+- (void)configAboutBlock
+{
+    __weak typeof(self) weakSelf = self;
+    self.thread_tableView.clickIndexCellBlock = ^(NSIndexPath *indexPath, NSMutableArray *data_array) {
+        DOThreadCellModel *cell_model = data_array[indexPath.row];
+        switch (cell_model.type) {
+            case ThreadCellModelTypeManual:    //需调用 start 手动开启线程
+                [weakSelf createNSThread1];
+                break;
+            case ThreadCellModelTypeAutomatic: //创建完线程直接开启
+                [weakSelf createNSThread2];
+                break;
+            case ThreadCellModelTypeImplicit:  //隐式创建，直接启动
+                [weakSelf createNSThread3];
+                break;
+                
+            default:
+                break;
+        }
+    };
+}
+
+#pragma mark - 创建线程相关方法
+- (void)createNSThread1
+{
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(doSomething:) object:@"NSThread01"];
+    [thread start];
+    
+//    NSThread *thread = [[NSThread alloc] initWithBlock:^{
+//
+//    }];
+}
+
+- (void)createNSThread2
+{
+    [NSThread detachNewThreadSelector:@selector(doSomething:) toTarget:self withObject:@"NSThread02"];
+//    [NSThread detachNewThreadWithBlock:^{
+//
+//    }];
+}
+
+- (void)createNSThread3
+{
+    [self performSelectorInBackground:@selector(doSomething:) withObject:@"NSThread03"];
+}
+
+- (void)doSomething:(NSString *) object_str
+{
+    NSLog(@"参数：%@， 线程：%@", object_str, [NSThread currentThread]);
 }
 
 #pragma mark - Getter Cycle
