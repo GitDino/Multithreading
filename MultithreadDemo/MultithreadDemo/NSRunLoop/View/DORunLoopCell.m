@@ -1,25 +1,24 @@
 //
-//  DOThreadCell.m
+//  DORunLoopCell.m
 //  MultithreadDemo
 //
 //  Created by 魏欣宇 on 2018/4/24.
 //  Copyright © 2018年 Dino. All rights reserved.
 //
 
-#import "DOThreadCell.h"
+#import "DORunLoopCell.h"
+#import "DORunLoopCellModel.h"
 
-#import "DOThreadCellModel.h"
-
-@implementation DOThreadCell
+@implementation DORunLoopCell
 
 #pragma mark - Public Cycle
-+ (instancetype)threadCellWithTableView:(UITableView *) tableView
++ (instancetype)runLoopCellWithTableView:(UITableView *) tableView
 {
-    static NSString *ID = @"DOThreadCell";
-    DOThreadCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    static NSString *ID = @"DORunLoopCell";
+    DORunLoopCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil)
     {
-        cell = [[DOThreadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[DORunLoopCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     return cell;
 }
@@ -32,7 +31,7 @@
 }
 
 #pragma mark - Setter Cycle
-- (void)setCell_model:(DOThreadCellModel *)cell_model
+- (void)setCell_model:(DORunLoopCellModel *)cell_model
 {
     _cell_model = cell_model;
     
