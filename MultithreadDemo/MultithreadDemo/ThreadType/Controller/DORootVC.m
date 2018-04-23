@@ -13,6 +13,7 @@
 
 #import "DOpthreadVC.h"
 #import "DOThreadVC.h"
+#import "DORunLoopVC.h"
 
 #import "DOTypeListTableView.h"
 #import "DOTypeCellModel.h"
@@ -92,8 +93,9 @@
         DOTypeCellModel *cell_model2 = [DOTypeCellModel typeCellModelWithTitle:@"NSThread" pushClass:[DOThreadVC class]];
         DOTypeCellModel *cell_model3 = [DOTypeCellModel typeCellModelWithTitle:@"GCD" pushClass:nil];
         DOTypeCellModel *cell_model4 = [DOTypeCellModel typeCellModelWithTitle:@"NSOperation" pushClass:nil];
+        DOTypeCellModel *cell_model5 = [DOTypeCellModel typeCellModelWithTitle:@"NSRunLoop相关" pushClass:[DORunLoopVC class]];
         
-        NSArray *temp_array = @[cell_model1, cell_model2, cell_model3, cell_model4];
+        NSArray *temp_array = @[cell_model1, cell_model2, cell_model3, cell_model4, cell_model5];
         
         _data_array = [NSMutableArray array];
         [_data_array addObjectsFromArray:temp_array];

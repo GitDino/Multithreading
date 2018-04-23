@@ -24,6 +24,7 @@
 		01A10FE1208E7DD200382781 /* DOThreadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FE0208E7DD200382781 /* DOThreadCell.m */; };
 		01A10FE5208E7E3C00382781 /* DOThreadCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FE4208E7E3C00382781 /* DOThreadCellModel.m */; };
 		01A10FE8208E885300382781 /* DOSimulationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FE7208E885300382781 /* DOSimulationVC.m */; };
+		01A10FED208E8EC100382781 /* DORunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FEC208E8EC100382781 /* DORunLoopVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		01A10FE4208E7E3C00382781 /* DOThreadCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOThreadCellModel.m; sourceTree = "<group>"; };
 		01A10FE6208E885300382781 /* DOSimulationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSimulationVC.h; sourceTree = "<group>"; };
 		01A10FE7208E885300382781 /* DOSimulationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSimulationVC.m; sourceTree = "<group>"; };
+		01A10FEB208E8EC100382781 /* DORunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DORunLoopVC.h; sourceTree = "<group>"; };
+		01A10FEC208E8EC100382781 /* DORunLoopVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DORunLoopVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 				01A10FD1208E73C800382781 /* NSThread */,
 				01A10FD2208E73CF00382781 /* GCD */,
 				01A10FD3208E73D500382781 /* NSOperation */,
+				01A10FE9208E8E9700382781 /* NSRunLoop */,
 				01A10FC2208E680F00382781 /* Protocol */,
 				01A10FBA208E63F700382781 /* Bases */,
 				01A10FB9208E63F000382781 /* Resources */,
@@ -293,6 +297,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		01A10FE9208E8E9700382781 /* NSRunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				01A10FEA208E8EAE00382781 /* Controller */,
+			);
+			path = NSRunLoop;
+			sourceTree = "<group>";
+		};
+		01A10FEA208E8EAE00382781 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				01A10FEB208E8EC100382781 /* DORunLoopVC.h */,
+				01A10FEC208E8EC100382781 /* DORunLoopVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,6 +456,7 @@
 				01A10F89208E63E600382781 /* AppDelegate.m in Sources */,
 				01A10FDE208E7DBA00382781 /* DOThreadTableView.m in Sources */,
 				01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */,
+				01A10FED208E8EC100382781 /* DORunLoopVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
