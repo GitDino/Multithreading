@@ -10,6 +10,8 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 #import "DORootVC.h"
+#import "DOpthreadVC.h"
+
 #import "DOTypeListTableView.h"
 #import "DOTypeCellModel.h"
 
@@ -19,11 +21,18 @@
 
 @property (nonatomic, strong) NSMutableArray *data_array;
 
+@property (nonatomic, strong) UIButton *sleep_btn;
+
 @end
 
 @implementation DORootVC
 
 #pragma mark - Life Cycle
+- (void)dealloc
+{
+    NSLog(@"%s", __FUNCTION__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -41,14 +50,31 @@
     [self.view addSubview:self.list_tableView];
     
     [self.list_tableView refreshData:self.data_array];
+    
+    [self.view addSubview:self.sleep_btn];
+    [self.sleep_btn addTarget:self action:@selector(clickMainThreadBlocking) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)configAboutBlock
 {
+    __weak typeof(self) weakSelf = self;
     self.list_tableView.clickIndexCellBlock = ^(NSIndexPath *indexPath, NSMutableArray *data_array) {
-        NSLog(@"%@", [data_array[indexPath.row] cell_title]);
+        
+        DOTypeCellModel *cell_model = data_array[indexPath.row];
+        UIViewController *push_vc = [[cell_model.vc_class alloc] init];
+        [weakSelf.navigationController pushViewController:push_vc animated:YES];
     };
 }
+
+#pragma mark - Event Cycle
+- (void)clickMainThreadBlocking
+{
+    for (int i = 0; i < 10000; i++)
+    {
+        NSLog(@"---%d---%@---", i, [NSThread currentThread]);
+    }
+}
+
 
 
 #pragma mark - Getter Cycle
@@ -65,7 +91,7 @@
 {
     if (!_data_array)
     {
-        DOTypeCellModel *cell_model1 = [DOTypeCellModel typeCellModelWithTitle:@"pthread" pushClass:nil];
+        DOTypeCellModel *cell_model1 = [DOTypeCellModel typeCellModelWithTitle:@"pthread" pushClass:[DOpthreadVC class]];
         DOTypeCellModel *cell_model2 = [DOTypeCellModel typeCellModelWithTitle:@"NSThread" pushClass:nil];
         DOTypeCellModel *cell_model3 = [DOTypeCellModel typeCellModelWithTitle:@"GCD" pushClass:nil];
         DOTypeCellModel *cell_model4 = [DOTypeCellModel typeCellModelWithTitle:@"NSOperation" pushClass:nil];
@@ -76,6 +102,17 @@
         [_data_array addObjectsFromArray:temp_array];
     }
     return _data_array;
+}
+
+- (UIButton *)sleep_btn
+{
+    if (!_sleep_btn)
+    {
+        _sleep_btn = [[UIButton alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - 100) * 0.5, SCREEN_HEIGHT - 22 - 44, 100, 44)];
+        [_sleep_btn setTitle:@"主线程阻塞" forState:UIControlStateNormal];
+        [_sleep_btn setTitleColor:[UIColor colorWithRed:30 / 255.0 green:144 / 255.0 blue:255 / 255.0 alpha:1.0] forState:UIControlStateNormal];
+    }
+    return _sleep_btn;
 }
 
 @end

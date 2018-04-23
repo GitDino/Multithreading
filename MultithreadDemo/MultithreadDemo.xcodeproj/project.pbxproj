@@ -18,6 +18,7 @@
 		01A10FC7208E69D200382781 /* DOTypeListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FC6208E69D200382781 /* DOTypeListTableView.m */; };
 		01A10FCB208E6F2600382781 /* DOTypeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FCA208E6F2600382781 /* DOTypeCellModel.m */; };
 		01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FCD208E712F00382781 /* DOTypeListCell.m */; };
+		01A10FD6208E744900382781 /* DOpthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FD5208E744900382781 /* DOpthreadVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		01A10FCA208E6F2600382781 /* DOTypeCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeCellModel.m; sourceTree = "<group>"; };
 		01A10FCC208E712F00382781 /* DOTypeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypeListCell.h; sourceTree = "<group>"; };
 		01A10FCD208E712F00382781 /* DOTypeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeListCell.m; sourceTree = "<group>"; };
+		01A10FD4208E744900382781 /* DOpthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOpthreadVC.h; sourceTree = "<group>"; };
+		01A10FD5208E744900382781 /* DOpthreadVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOpthreadVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				01A10FCF208E72A300382781 /* ThreadType */,
+				01A10FD0208E73B500382781 /* pthread */,
+				01A10FD1208E73C800382781 /* NSThread */,
+				01A10FD2208E73CF00382781 /* GCD */,
+				01A10FD3208E73D500382781 /* NSOperation */,
 				01A10FC2208E680F00382781 /* Protocol */,
 				01A10FBA208E63F700382781 /* Bases */,
 				01A10FB9208E63F000382781 /* Resources */,
@@ -205,6 +212,36 @@
 				01A10FBB208E640F00382781 /* Controller */,
 			);
 			path = ThreadType;
+			sourceTree = "<group>";
+		};
+		01A10FD0208E73B500382781 /* pthread */ = {
+			isa = PBXGroup;
+			children = (
+				01A10FD4208E744900382781 /* DOpthreadVC.h */,
+				01A10FD5208E744900382781 /* DOpthreadVC.m */,
+			);
+			path = pthread;
+			sourceTree = "<group>";
+		};
+		01A10FD1208E73C800382781 /* NSThread */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSThread;
+			sourceTree = "<group>";
+		};
+		01A10FD2208E73CF00382781 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		01A10FD3208E73D500382781 /* NSOperation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSOperation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +377,7 @@
 				01A10FBE208E642100382781 /* DORootVC.m in Sources */,
 				01A10FC1208E675200382781 /* DOBaseTableView.m in Sources */,
 				01A10F97208E63E700382781 /* main.m in Sources */,
+				01A10FD6208E744900382781 /* DOpthreadVC.m in Sources */,
 				01A10FCB208E6F2600382781 /* DOTypeCellModel.m in Sources */,
 				01A10F89208E63E600382781 /* AppDelegate.m in Sources */,
 				01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */,
