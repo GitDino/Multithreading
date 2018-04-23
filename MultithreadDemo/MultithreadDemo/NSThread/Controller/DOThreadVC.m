@@ -10,6 +10,7 @@
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 #import "DOThreadVC.h"
+#import "DOSimulationVC.h"
 #import "DOThreadTableView.h"
 #import "DOThreadCellModel.h"
 
@@ -61,6 +62,12 @@
                 break;
             case ThreadCellModelTypeImplicit:  //隐式创建，直接启动
                 [weakSelf createNSThread3];
+                break;
+            case ThreadCellModelTypeSellTickets: //线程安全
+            {
+                DOSimulationVC *simluation_vc = [[DOSimulationVC alloc] init];
+                [weakSelf.navigationController pushViewController:simluation_vc animated:YES];
+            }
                 break;
                 
             default:
@@ -115,8 +122,9 @@
         DOThreadCellModel *cell_model1 = [DOThreadCellModel threadCellModelWithTitle:@"NSThread开线程 方法一" type:ThreadCellModelTypeManual];
         DOThreadCellModel *cell_model2 = [DOThreadCellModel threadCellModelWithTitle:@"NSThread开线程 方法二" type:ThreadCellModelTypeAutomatic];
         DOThreadCellModel *cell_model3 = [DOThreadCellModel threadCellModelWithTitle:@"NSThread开线程 方法三" type:ThreadCellModelTypeImplicit];
+        DOThreadCellModel *cell_model4 = [DOThreadCellModel threadCellModelWithTitle:@"NSThread线程安全" type:ThreadCellModelTypeSellTickets];
         
-        NSArray *temp_array = @[cell_model1, cell_model2, cell_model3];
+        NSArray *temp_array = @[cell_model1, cell_model2, cell_model3, cell_model4];
         
         _data_array = [NSMutableArray array];
         [_data_array addObjectsFromArray:temp_array];

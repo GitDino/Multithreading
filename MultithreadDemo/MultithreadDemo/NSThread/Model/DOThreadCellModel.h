@@ -11,7 +11,8 @@
 typedef NS_ENUM(NSUInteger, ThreadCellModelType) {
     ThreadCellModelTypeManual = 0,  //手动开启 start
     ThreadCellModelTypeAutomatic,   //自动生成、开启
-    ThreadCellModelTypeImplicit     //隐式创建，直接启动
+    ThreadCellModelTypeImplicit,    //隐式创建，直接启动
+    ThreadCellModelTypeSellTickets, //线程安全
 };
 
 @interface DOThreadCellModel : NSObject
