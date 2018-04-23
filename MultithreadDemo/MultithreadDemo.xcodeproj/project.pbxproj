@@ -112,9 +112,7 @@
 		01A10F86208E63E600382781 /* MultithreadDemo */ = {
 			isa = PBXGroup;
 			children = (
-				01A10FC8208E6EF800382781 /* Model */,
-				01A10FC4208E691900382781 /* View */,
-				01A10FBB208E640F00382781 /* Controller */,
+				01A10FCF208E72A300382781 /* ThreadType */,
 				01A10FC2208E680F00382781 /* Protocol */,
 				01A10FBA208E63F700382781 /* Bases */,
 				01A10FB9208E63F000382781 /* Resources */,
@@ -197,6 +195,16 @@
 				01A10FCA208E6F2600382781 /* DOTypeCellModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		01A10FCF208E72A300382781 /* ThreadType */ = {
+			isa = PBXGroup;
+			children = (
+				01A10FC8208E6EF800382781 /* Model */,
+				01A10FC4208E691900382781 /* View */,
+				01A10FBB208E640F00382781 /* Controller */,
+			);
+			path = ThreadType;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
