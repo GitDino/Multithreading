@@ -7,7 +7,6 @@
 //
 
 #import "DOGCDCell.h"
-#import "DOCellModel.h"
 
 @implementation DOGCDCell
 
@@ -31,9 +30,5 @@
 }
 
 #pragma mark - Setter Cycle
-- (void)setCell_model:(DOCellModel *)cell_model
-{
-    _cell_model = cell_model;
-}
 
 @end
