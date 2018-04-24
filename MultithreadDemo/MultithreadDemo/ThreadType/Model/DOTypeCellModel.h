@@ -12,6 +12,8 @@
 
 @property (nonatomic, copy) NSString *cell_title;
 
+@property (nonatomic, copy) NSString *section_title;
+
 @property (nonatomic, assign) Class vc_class;
 
 + (instancetype)typeCellModelWithTitle:(NSString *) cell_title pushClass:(Class) vc_class;

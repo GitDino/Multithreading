@@ -58,7 +58,7 @@
     __weak typeof(self) weakSelf = self;
     self.list_tableView.clickIndexCellBlock = ^(NSIndexPath *indexPath, NSMutableArray *data_array) {
         
-        DOTypeCellModel *cell_model = data_array[indexPath.row];
+        DOTypeCellModel *cell_model = data_array[indexPath.section][indexPath.row];
         UIViewController *push_vc = [[cell_model.vc_class alloc] init];
         [weakSelf.navigationController pushViewController:push_vc animated:YES];
     };
@@ -90,12 +90,14 @@
     if (!_data_array)
     {
         DOTypeCellModel *cell_model1 = [DOTypeCellModel typeCellModelWithTitle:@"pthread" pushClass:[DOpthreadVC class]];
+        cell_model1.section_title = @"多线程实现方式";
         DOTypeCellModel *cell_model2 = [DOTypeCellModel typeCellModelWithTitle:@"NSThread" pushClass:[DOThreadVC class]];
         DOTypeCellModel *cell_model3 = [DOTypeCellModel typeCellModelWithTitle:@"GCD" pushClass:nil];
         DOTypeCellModel *cell_model4 = [DOTypeCellModel typeCellModelWithTitle:@"NSOperation" pushClass:nil];
         DOTypeCellModel *cell_model5 = [DOTypeCellModel typeCellModelWithTitle:@"NSRunLoop相关" pushClass:[DORunLoopVC class]];
+        cell_model5.section_title = @"RunLoop";
         
-        NSArray *temp_array = @[cell_model1, cell_model2, cell_model3, cell_model4, cell_model5];
+        NSArray *temp_array = @[@[cell_model1, cell_model2, cell_model3, cell_model4], @[cell_model5]];
         
         _data_array = [NSMutableArray array];
         [_data_array addObjectsFromArray:temp_array];

@@ -28,6 +28,7 @@
 		01A10FF1208E8FA900382781 /* DORunLoopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FF0208E8FA900382781 /* DORunLoopTableView.m */; };
 		01A10FF4208E8FC400382781 /* DORunLoopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FF3208E8FC300382781 /* DORunLoopCell.m */; };
 		01A10FF8208E908400382781 /* DORunLoopCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FF7208E908400382781 /* DORunLoopCellModel.m */; };
+		01BEDC8D208FE98C00AFF6F2 /* DOTypeListSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC8C208FE98C00AFF6F2 /* DOTypeListSectionHeader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		01A10FF3208E8FC300382781 /* DORunLoopCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DORunLoopCell.m; sourceTree = "<group>"; };
 		01A10FF6208E908400382781 /* DORunLoopCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DORunLoopCellModel.h; sourceTree = "<group>"; };
 		01A10FF7208E908400382781 /* DORunLoopCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DORunLoopCellModel.m; sourceTree = "<group>"; };
+		01BEDC8B208FE98C00AFF6F2 /* DOTypeListSectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypeListSectionHeader.h; sourceTree = "<group>"; };
+		01BEDC8C208FE98C00AFF6F2 /* DOTypeListSectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeListSectionHeader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,8 @@
 			children = (
 				01A10FC5208E69D200382781 /* DOTypeListTableView.h */,
 				01A10FC6208E69D200382781 /* DOTypeListTableView.m */,
+				01BEDC8B208FE98C00AFF6F2 /* DOTypeListSectionHeader.h */,
+				01BEDC8C208FE98C00AFF6F2 /* DOTypeListSectionHeader.m */,
 				01A10FCC208E712F00382781 /* DOTypeListCell.h */,
 				01A10FCD208E712F00382781 /* DOTypeListCell.m */,
 			);
@@ -489,6 +494,7 @@
 				01A10FF4208E8FC400382781 /* DORunLoopCell.m in Sources */,
 				01A10FDE208E7DBA00382781 /* DOThreadTableView.m in Sources */,
 				01A10FF8208E908400382781 /* DORunLoopCellModel.m in Sources */,
+				01BEDC8D208FE98C00AFF6F2 /* DOTypeListSectionHeader.m in Sources */,
 				01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */,
 				01A10FED208E8EC100382781 /* DORunLoopVC.m in Sources */,
 			);
