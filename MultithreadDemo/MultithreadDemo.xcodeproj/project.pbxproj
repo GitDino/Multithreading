@@ -30,8 +30,8 @@
 		01BEDC91208FEC6600AFF6F2 /* DOGCDVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC90208FEC6600AFF6F2 /* DOGCDVC.m */; };
 		01BEDC95208FECE300AFF6F2 /* DOGCDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC94208FECE300AFF6F2 /* DOGCDTableView.m */; };
 		01BEDC98208FECFB00AFF6F2 /* DOGCDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC97208FECFB00AFF6F2 /* DOGCDCell.m */; };
-		01BEDC9C208FEDE400AFF6F2 /* DOCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC9B208FEDE400AFF6F2 /* DOCellModel.m */; };
 		01BEDCA0208FF03F00AFF6F2 /* DOThreadCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC9E208FF03F00AFF6F2 /* DOThreadCellModel.m */; };
+		01BEDCA4208FF14D00AFF6F2 /* DOTypeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDCA3208FF14D00AFF6F2 /* DOTypeCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,10 +100,10 @@
 		01BEDC94208FECE300AFF6F2 /* DOGCDTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOGCDTableView.m; sourceTree = "<group>"; };
 		01BEDC96208FECFB00AFF6F2 /* DOGCDCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOGCDCell.h; sourceTree = "<group>"; };
 		01BEDC97208FECFB00AFF6F2 /* DOGCDCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOGCDCell.m; sourceTree = "<group>"; };
-		01BEDC9A208FEDE400AFF6F2 /* DOCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOCellModel.h; sourceTree = "<group>"; };
-		01BEDC9B208FEDE400AFF6F2 /* DOCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOCellModel.m; sourceTree = "<group>"; };
 		01BEDC9E208FF03F00AFF6F2 /* DOThreadCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOThreadCellModel.m; sourceTree = "<group>"; };
 		01BEDC9F208FF03F00AFF6F2 /* DOThreadCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOThreadCellModel.h; sourceTree = "<group>"; };
+		01BEDCA2208FF14D00AFF6F2 /* DOTypeCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOTypeCellModel.h; sourceTree = "<group>"; };
+		01BEDCA3208FF14D00AFF6F2 /* DOTypeCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOTypeCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +203,6 @@
 				01A10F88208E63E600382781 /* AppDelegate.m */,
 				01A10FBF208E675200382781 /* DOBaseTableView.h */,
 				01A10FC0208E675200382781 /* DOBaseTableView.m */,
-				01BEDC9A208FEDE400AFF6F2 /* DOCellModel.h */,
-				01BEDC9B208FEDE400AFF6F2 /* DOCellModel.m */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -242,6 +240,7 @@
 		01A10FCF208E72A300382781 /* ThreadType */ = {
 			isa = PBXGroup;
 			children = (
+				01BEDCA1208FF13B00AFF6F2 /* Model */,
 				01A10FC4208E691900382781 /* View */,
 				01A10FBB208E640F00382781 /* Controller */,
 			);
@@ -369,6 +368,15 @@
 			children = (
 				01BEDC9F208FF03F00AFF6F2 /* DOThreadCellModel.h */,
 				01BEDC9E208FF03F00AFF6F2 /* DOThreadCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01BEDCA1208FF13B00AFF6F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01BEDCA2208FF14D00AFF6F2 /* DOTypeCellModel.h */,
+				01BEDCA3208FF14D00AFF6F2 /* DOTypeCellModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -509,6 +517,7 @@
 				01A10F97208E63E700382781 /* main.m in Sources */,
 				01A10FE8208E885300382781 /* DOSimulationVC.m in Sources */,
 				01BEDC98208FECFB00AFF6F2 /* DOGCDCell.m in Sources */,
+				01BEDCA4208FF14D00AFF6F2 /* DOTypeCellModel.m in Sources */,
 				01BEDC95208FECE300AFF6F2 /* DOGCDTableView.m in Sources */,
 				01A10FE1208E7DD200382781 /* DOThreadCell.m in Sources */,
 				01A10FD6208E744900382781 /* DOpthreadVC.m in Sources */,
@@ -516,7 +525,6 @@
 				01A10F89208E63E600382781 /* AppDelegate.m in Sources */,
 				01A10FF4208E8FC400382781 /* DORunLoopCell.m in Sources */,
 				01BEDC91208FEC6600AFF6F2 /* DOGCDVC.m in Sources */,
-				01BEDC9C208FEDE400AFF6F2 /* DOCellModel.m in Sources */,
 				01A10FDE208E7DBA00382781 /* DOThreadTableView.m in Sources */,
 				01A10FF8208E908400382781 /* DORunLoopCellModel.m in Sources */,
 				01BEDCA0208FF03F00AFF6F2 /* DOThreadCellModel.m in Sources */,

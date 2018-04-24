@@ -8,7 +8,7 @@
 
 #import "DOTypeListCell.h"
 
-#import "DOCellModel.h"
+#import "DOTypeCellModel.h"
 
 @implementation DOTypeListCell
 
@@ -32,7 +32,7 @@
 }
 
 #pragma mark - Setter Cycle
-- (void)setCell_model:(DOCellModel *)cell_model
+- (void)setCell_model:(DOTypeCellModel *)cell_model
 {
     _cell_model = cell_model;
     
