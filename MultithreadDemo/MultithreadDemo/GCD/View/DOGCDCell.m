@@ -7,6 +7,7 @@
 //
 
 #import "DOGCDCell.h"
+#import "DOGCDCellModel.h"
 
 @implementation DOGCDCell
 
@@ -30,5 +31,11 @@
 }
 
 #pragma mark - Setter Cycle
+- (void)setCell_model:(DOGCDCellModel *)cell_model
+{
+    _cell_model = cell_model;
+    
+    self.textLabel.text = _cell_model.cell_title;
+}
 
 @end

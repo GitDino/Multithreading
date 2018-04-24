@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DOGCDCellModel;
 
 @interface DOGCDCell : UITableViewCell
+
+@property (nonatomic, strong) DOGCDCellModel *cell_model;
 
 + (instancetype)GCDCellWithTableView:(UITableView *) tableView;
 

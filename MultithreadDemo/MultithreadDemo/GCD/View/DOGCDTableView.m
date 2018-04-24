@@ -16,6 +16,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DOGCDCell *cell = [DOGCDCell GCDCellWithTableView:tableView];
+    cell.cell_model = [self obtainDataWithIndex:indexPath];
     return cell;
 }
 
