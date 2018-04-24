@@ -7,7 +7,7 @@
 //
 
 #import "DOTypeListSectionHeader.h"
-#import "DOTypeCellModel.h"
+#import "DOCellModel.h"
 
 @interface DOTypeListSectionHeader ()
 
@@ -41,7 +41,7 @@
 }
 
 #pragma mark - Setter Cycle
-- (void)setCell_model:(DOTypeCellModel *)cell_model
+- (void)setCell_model:(DOCellModel *)cell_model
 {
     _cell_model = cell_model;
     

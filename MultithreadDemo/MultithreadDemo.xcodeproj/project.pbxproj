@@ -16,7 +16,6 @@
 		01A10FBE208E642100382781 /* DORootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FBD208E642100382781 /* DORootVC.m */; };
 		01A10FC1208E675200382781 /* DOBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FC0208E675200382781 /* DOBaseTableView.m */; };
 		01A10FC7208E69D200382781 /* DOTypeListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FC6208E69D200382781 /* DOTypeListTableView.m */; };
-		01A10FCB208E6F2600382781 /* DOTypeCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FCA208E6F2600382781 /* DOTypeCellModel.m */; };
 		01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FCD208E712F00382781 /* DOTypeListCell.m */; };
 		01A10FD6208E744900382781 /* DOpthreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FD5208E744900382781 /* DOpthreadVC.m */; };
 		01A10FDA208E7CC800382781 /* DOThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FD9208E7CC800382781 /* DOThreadVC.m */; };
@@ -73,8 +72,6 @@
 		01A10FC3208E683400382781 /* BaseTableViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewProtocol.h; sourceTree = "<group>"; };
 		01A10FC5208E69D200382781 /* DOTypeListTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypeListTableView.h; sourceTree = "<group>"; };
 		01A10FC6208E69D200382781 /* DOTypeListTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeListTableView.m; sourceTree = "<group>"; };
-		01A10FC9208E6F2600382781 /* DOTypeCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypeCellModel.h; sourceTree = "<group>"; };
-		01A10FCA208E6F2600382781 /* DOTypeCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeCellModel.m; sourceTree = "<group>"; };
 		01A10FCC208E712F00382781 /* DOTypeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOTypeListCell.h; sourceTree = "<group>"; };
 		01A10FCD208E712F00382781 /* DOTypeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOTypeListCell.m; sourceTree = "<group>"; };
 		01A10FD4208E744900382781 /* DOpthreadVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOpthreadVC.h; sourceTree = "<group>"; };
@@ -242,19 +239,9 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		01A10FC8208E6EF800382781 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				01A10FC9208E6F2600382781 /* DOTypeCellModel.h */,
-				01A10FCA208E6F2600382781 /* DOTypeCellModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		01A10FCF208E72A300382781 /* ThreadType */ = {
 			isa = PBXGroup;
 			children = (
-				01A10FC8208E6EF800382781 /* Model */,
 				01A10FC4208E691900382781 /* View */,
 				01A10FBB208E640F00382781 /* Controller */,
 			);
@@ -527,7 +514,6 @@
 				01A10FE1208E7DD200382781 /* DOThreadCell.m in Sources */,
 				01A10FD6208E744900382781 /* DOpthreadVC.m in Sources */,
 				01A10FF1208E8FA900382781 /* DORunLoopTableView.m in Sources */,
-				01A10FCB208E6F2600382781 /* DOTypeCellModel.m in Sources */,
 				01A10F89208E63E600382781 /* AppDelegate.m in Sources */,
 				01A10FF4208E8FC400382781 /* DORunLoopCell.m in Sources */,
 				01BEDC91208FEC6600AFF6F2 /* DOGCDVC.m in Sources */,

@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class DOTypeCellModel;
+@class DOCellModel;
 
 @interface DOTypeListCell : UITableViewCell
 
-@property (nonatomic, strong) DOTypeCellModel *cell_model;
+@property (nonatomic, strong) DOCellModel *cell_model;
 
 + (instancetype)typeListCellWithTableView:(UITableView *) tableView;
 
