@@ -21,7 +21,6 @@
 		01A10FDA208E7CC800382781 /* DOThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FD9208E7CC800382781 /* DOThreadVC.m */; };
 		01A10FDE208E7DBA00382781 /* DOThreadTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FDD208E7DBA00382781 /* DOThreadTableView.m */; };
 		01A10FE1208E7DD200382781 /* DOThreadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FE0208E7DD200382781 /* DOThreadCell.m */; };
-		01A10FE5208E7E3C00382781 /* DOThreadCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FE4208E7E3C00382781 /* DOThreadCellModel.m */; };
 		01A10FE8208E885300382781 /* DOSimulationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FE7208E885300382781 /* DOSimulationVC.m */; };
 		01A10FED208E8EC100382781 /* DORunLoopVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FEC208E8EC100382781 /* DORunLoopVC.m */; };
 		01A10FF1208E8FA900382781 /* DORunLoopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10FF0208E8FA900382781 /* DORunLoopTableView.m */; };
@@ -82,8 +81,6 @@
 		01A10FDD208E7DBA00382781 /* DOThreadTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOThreadTableView.m; sourceTree = "<group>"; };
 		01A10FDF208E7DD200382781 /* DOThreadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOThreadCell.h; sourceTree = "<group>"; };
 		01A10FE0208E7DD200382781 /* DOThreadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOThreadCell.m; sourceTree = "<group>"; };
-		01A10FE3208E7E3C00382781 /* DOThreadCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOThreadCellModel.h; sourceTree = "<group>"; };
-		01A10FE4208E7E3C00382781 /* DOThreadCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOThreadCellModel.m; sourceTree = "<group>"; };
 		01A10FE6208E885300382781 /* DOSimulationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOSimulationVC.h; sourceTree = "<group>"; };
 		01A10FE7208E885300382781 /* DOSimulationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOSimulationVC.m; sourceTree = "<group>"; };
 		01A10FEB208E8EC100382781 /* DORunLoopVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DORunLoopVC.h; sourceTree = "<group>"; };
@@ -260,7 +257,6 @@
 		01A10FD1208E73C800382781 /* NSThread */ = {
 			isa = PBXGroup;
 			children = (
-				01A10FE2208E7E2900382781 /* Model */,
 				01A10FDB208E7DA600382781 /* View */,
 				01A10FD7208E7CB200382781 /* Controller */,
 			);
@@ -303,15 +299,6 @@
 				01A10FE0208E7DD200382781 /* DOThreadCell.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		01A10FE2208E7E2900382781 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				01A10FE3208E7E3C00382781 /* DOThreadCellModel.h */,
-				01A10FE4208E7E3C00382781 /* DOThreadCellModel.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		01A10FE9208E8E9700382781 /* NSRunLoop */ = {
@@ -504,7 +491,6 @@
 			files = (
 				01A10FC7208E69D200382781 /* DOTypeListTableView.m in Sources */,
 				01A10FBE208E642100382781 /* DORootVC.m in Sources */,
-				01A10FE5208E7E3C00382781 /* DOThreadCellModel.m in Sources */,
 				01A10FDA208E7CC800382781 /* DOThreadVC.m in Sources */,
 				01A10FC1208E675200382781 /* DOBaseTableView.m in Sources */,
 				01A10F97208E63E700382781 /* main.m in Sources */,
