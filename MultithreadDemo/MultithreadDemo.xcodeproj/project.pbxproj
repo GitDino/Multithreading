@@ -31,6 +31,7 @@
 		01BEDC95208FECE300AFF6F2 /* DOGCDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC94208FECE300AFF6F2 /* DOGCDTableView.m */; };
 		01BEDC98208FECFB00AFF6F2 /* DOGCDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC97208FECFB00AFF6F2 /* DOGCDCell.m */; };
 		01BEDC9C208FEDE400AFF6F2 /* DOCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC9B208FEDE400AFF6F2 /* DOCellModel.m */; };
+		01BEDCA0208FF03F00AFF6F2 /* DOThreadCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BEDC9E208FF03F00AFF6F2 /* DOThreadCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,8 @@
 		01BEDC97208FECFB00AFF6F2 /* DOGCDCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOGCDCell.m; sourceTree = "<group>"; };
 		01BEDC9A208FEDE400AFF6F2 /* DOCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOCellModel.h; sourceTree = "<group>"; };
 		01BEDC9B208FEDE400AFF6F2 /* DOCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOCellModel.m; sourceTree = "<group>"; };
+		01BEDC9E208FF03F00AFF6F2 /* DOThreadCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOThreadCellModel.m; sourceTree = "<group>"; };
+		01BEDC9F208FF03F00AFF6F2 /* DOThreadCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOThreadCellModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +260,7 @@
 		01A10FD1208E73C800382781 /* NSThread */ = {
 			isa = PBXGroup;
 			children = (
+				01BEDC9D208FF03200AFF6F2 /* Model */,
 				01A10FDB208E7DA600382781 /* View */,
 				01A10FD7208E7CB200382781 /* Controller */,
 			);
@@ -358,6 +362,15 @@
 				01BEDC97208FECFB00AFF6F2 /* DOGCDCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		01BEDC9D208FF03200AFF6F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01BEDC9F208FF03F00AFF6F2 /* DOThreadCellModel.h */,
+				01BEDC9E208FF03F00AFF6F2 /* DOThreadCellModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +519,7 @@
 				01BEDC9C208FEDE400AFF6F2 /* DOCellModel.m in Sources */,
 				01A10FDE208E7DBA00382781 /* DOThreadTableView.m in Sources */,
 				01A10FF8208E908400382781 /* DORunLoopCellModel.m in Sources */,
+				01BEDCA0208FF03F00AFF6F2 /* DOThreadCellModel.m in Sources */,
 				01BEDC8D208FE98C00AFF6F2 /* DOTypeListSectionHeader.m in Sources */,
 				01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */,
 				01A10FED208E8EC100382781 /* DORunLoopVC.m in Sources */,
