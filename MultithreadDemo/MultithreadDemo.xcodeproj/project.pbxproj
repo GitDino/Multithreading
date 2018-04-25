@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0115710D2090FD08002E9B71 /* DOOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115710C2090FD08002E9B71 /* DOOperationVC.m */; };
+		011571122090FE09002E9B71 /* DOOperationTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 011571112090FE09002E9B71 /* DOOperationTableView.m */; };
+		011571152090FE2F002E9B71 /* DOOperationSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 011571142090FE2F002E9B71 /* DOOperationSectionHeader.m */; };
+		011571182090FECA002E9B71 /* DOOperationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011571172090FECA002E9B71 /* DOOperationCell.m */; };
+		0115711B2090FF9F002E9B71 /* DOOperationCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115711A2090FF9F002E9B71 /* DOOperationCellModel.m */; };
 		01A10F89208E63E600382781 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10F88208E63E600382781 /* AppDelegate.m */; };
 		01A10F91208E63E700382781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A10F90208E63E700382781 /* Assets.xcassets */; };
 		01A10F94208E63E700382781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A10F92208E63E700382781 /* LaunchScreen.storyboard */; };
@@ -56,6 +60,14 @@
 /* Begin PBXFileReference section */
 		0115710B2090FD08002E9B71 /* DOOperationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOOperationVC.h; sourceTree = "<group>"; };
 		0115710C2090FD08002E9B71 /* DOOperationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOOperationVC.m; sourceTree = "<group>"; };
+		011571102090FE09002E9B71 /* DOOperationTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOOperationTableView.h; sourceTree = "<group>"; };
+		011571112090FE09002E9B71 /* DOOperationTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOOperationTableView.m; sourceTree = "<group>"; };
+		011571132090FE2F002E9B71 /* DOOperationSectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOOperationSectionHeader.h; sourceTree = "<group>"; };
+		011571142090FE2F002E9B71 /* DOOperationSectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOOperationSectionHeader.m; sourceTree = "<group>"; };
+		011571162090FECA002E9B71 /* DOOperationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOOperationCell.h; sourceTree = "<group>"; };
+		011571172090FECA002E9B71 /* DOOperationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOOperationCell.m; sourceTree = "<group>"; };
+		011571192090FF9F002E9B71 /* DOOperationCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOOperationCellModel.h; sourceTree = "<group>"; };
+		0115711A2090FF9F002E9B71 /* DOOperationCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOOperationCellModel.m; sourceTree = "<group>"; };
 		01A10F84208E63E600382781 /* MultithreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultithreadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A10F87208E63E600382781 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01A10F88208E63E600382781 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -144,6 +156,28 @@
 				0115710C2090FD08002E9B71 /* DOOperationVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0115710E2090FDED002E9B71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				011571102090FE09002E9B71 /* DOOperationTableView.h */,
+				011571112090FE09002E9B71 /* DOOperationTableView.m */,
+				011571132090FE2F002E9B71 /* DOOperationSectionHeader.h */,
+				011571142090FE2F002E9B71 /* DOOperationSectionHeader.m */,
+				011571162090FECA002E9B71 /* DOOperationCell.h */,
+				011571172090FECA002E9B71 /* DOOperationCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0115710F2090FDF5002E9B71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				011571192090FF9F002E9B71 /* DOOperationCellModel.h */,
+				0115711A2090FF9F002E9B71 /* DOOperationCellModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		01A10F7B208E63E600382781 = {
@@ -294,6 +328,8 @@
 		01A10FD3208E73D500382781 /* NSOperation */ = {
 			isa = PBXGroup;
 			children = (
+				0115710F2090FDF5002E9B71 /* Model */,
+				0115710E2090FDED002E9B71 /* View */,
 				0115710A2090FCF0002E9B71 /* Controller */,
 			);
 			path = NSOperation;
@@ -536,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				011571122090FE09002E9B71 /* DOOperationTableView.m in Sources */,
 				01A10FC7208E69D200382781 /* DOTypeListTableView.m in Sources */,
 				01A10FBE208E642100382781 /* DORootVC.m in Sources */,
 				01A10FDA208E7CC800382781 /* DOThreadVC.m in Sources */,
@@ -549,13 +586,16 @@
 				01BEDCA8208FF1F600AFF6F2 /* DOGCDCellModel.m in Sources */,
 				01A10FE1208E7DD200382781 /* DOThreadCell.m in Sources */,
 				01A10FD6208E744900382781 /* DOpthreadVC.m in Sources */,
+				0115711B2090FF9F002E9B71 /* DOOperationCellModel.m in Sources */,
 				01A10FF1208E8FA900382781 /* DORunLoopTableView.m in Sources */,
 				01A10F89208E63E600382781 /* AppDelegate.m in Sources */,
 				01A10FF4208E8FC400382781 /* DORunLoopCell.m in Sources */,
+				011571152090FE2F002E9B71 /* DOOperationSectionHeader.m in Sources */,
 				01BEDC91208FEC6600AFF6F2 /* DOGCDVC.m in Sources */,
 				01A10FDE208E7DBA00382781 /* DOThreadTableView.m in Sources */,
 				01A10FF8208E908400382781 /* DORunLoopCellModel.m in Sources */,
 				01BEDCA0208FF03F00AFF6F2 /* DOThreadCellModel.m in Sources */,
+				011571182090FECA002E9B71 /* DOOperationCell.m in Sources */,
 				01BEDC8D208FE98C00AFF6F2 /* DOTypeListSectionHeader.m in Sources */,
 				01A10FCE208E712F00382781 /* DOTypeListCell.m in Sources */,
 				01A10FED208E8EC100382781 /* DORunLoopVC.m in Sources */,
