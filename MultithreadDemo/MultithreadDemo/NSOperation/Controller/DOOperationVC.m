@@ -12,12 +12,18 @@
 #import "DOOperationVC.h"
 #import "DOOperationTableView.h"
 #import "DOOperationCellModel.h"
+#import "DOOperation.h"
 
 @interface DOOperationVC ()
 
 @property (nonatomic, strong) DOOperationTableView *operation_tableView;
 
 @property (nonatomic, strong) NSMutableArray *data_array;
+
+/**
+ NSOperation中：全局队列
+ */
+//@property (nonatomic, strong) NSOperationQueue *op_queue;
 
 @end
 
@@ -36,6 +42,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self configSubViews];
+    
+    [self configAboutBlock];
 }
 
 #pragma mark - Custom Cycle
@@ -43,6 +51,185 @@
 {
     [self.view addSubview:self.operation_tableView];
     [self.operation_tableView refreshData:self.data_array];
+}
+
+- (void)configAboutBlock
+{
+    __weak typeof(self) weakSelf = self;
+    self.operation_tableView.clickIndexCellBlock = ^(NSIndexPath *indexPath, NSMutableArray *data_array) {
+        DOOperationCellModel *cell_model = data_array[indexPath.section][indexPath.row];
+        switch (cell_model.type) {
+            case OperationTypeInvocation: //NSInvocationOperation
+                [weakSelf invocationOperation];
+                break;
+            case OperationTypeBlock: //NSBlockOperation
+                [weakSelf blockOperation];
+                break;
+            case OperationTypeSubclass: //继承 NSOperation 的子类
+                [weakSelf customOperation];
+                break;
+            case OperationTypeAddExecutionBlock: //addExecutionBlock
+                [weakSelf executionBlock];
+                break;
+            case OperationTypeAddOperation: //addOperation
+                [weakSelf addOperation];
+                break;
+            case OperationTypeAddOperationWithBlock: //addOperationWithBlock
+                [weakSelf operationWithBlock];
+                break;
+            case OperationTypeCommunication: //线程间通信
+                [weakSelf threadCommunication];
+                break;
+            case OperationTypeMaxConcurrent: //最大并发数
+                [weakSelf maxConcurrent];
+                break;
+            case OperationTypeDependency: //操作依赖
+                [weakSelf operationDependency];
+                break;
+                
+            default:
+                break;
+        }
+    };
+}
+
+#pragma mark - 三种创建方式
+- (void)invocationOperation
+{
+    NSInvocationOperation *invocation_op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(invocationOperationFunc:) object:@"NSInvocationOperation"];
+    [invocation_op start];
+}
+
+- (void)invocationOperationFunc:(id) object
+{
+    NSLog(@"%@---%@", object, [NSThread currentThread]);
+}
+
+- (void)blockOperation
+{
+    __weak typeof(self) weakSelf = self;
+    NSBlockOperation *block_op = [NSBlockOperation blockOperationWithBlock:^{
+        [weakSelf blockOperationFunc:@"NSBlockOperation"];
+    }];
+    [block_op start];
+}
+
+- (void)blockOperationFunc:(id) object
+{
+    NSLog(@"%@---%@", object, [NSThread currentThread]);
+}
+
+- (void)customOperation
+{
+    DOOperation *operation = [[DOOperation alloc] init];
+    [operation start];
+}
+
+#pragma mark - 其他相关
+- (void)executionBlock
+{
+    NSBlockOperation *block_op = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"addExecutionBlock 的使用---%@", [NSThread currentThread]);
+    }];
+    
+    [block_op addExecutionBlock:^{
+        NSLog(@"操作一：%@", [NSThread currentThread]);
+    }];
+    
+    [block_op addExecutionBlock:^{
+        NSLog(@"操作二：%@", [NSThread currentThread]);
+    }];
+    
+    [block_op addExecutionBlock:^{
+        NSLog(@"操作三：%@", [NSThread currentThread]);
+    }];
+    
+    [block_op start];
+}
+
+- (void)addOperation
+{
+    NSOperationQueue *op_queue = [[NSOperationQueue alloc] init];
+    
+    NSInvocationOperation *invocation_op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(addOperationFunc:) object:@"NSInvocationOperation"];
+    __weak typeof(self) weakSelf = self;
+    NSBlockOperation *block_op = [NSBlockOperation blockOperationWithBlock:^{
+        [weakSelf addOperationFunc:@"NSBlockOperation"];
+    }];
+    
+    [op_queue addOperation:invocation_op];
+    [op_queue addOperation:block_op];
+}
+
+- (void)addOperationFunc:(id) object
+{
+    NSLog(@"%@---%@", object, [NSThread currentThread]);
+}
+
+- (void)operationWithBlock
+{
+    NSOperationQueue *op_queue = [[NSOperationQueue alloc] init];
+    
+    [op_queue addOperationWithBlock:^{
+        NSLog(@"addOperationWithBlock---%@", [NSThread currentThread]);
+    }];
+}
+
+- (void)threadCommunication
+{
+    NSOperationQueue *op_queue = [[NSOperationQueue alloc] init];
+    
+    [op_queue addOperationWithBlock:^{
+        NSLog(@"睡3秒");
+        [NSThread sleepForTimeInterval:3.0];
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            NSLog(@"主线程：%@", [NSThread currentThread]);
+        }];
+    }];
+}
+
+- (void)maxConcurrent
+{
+    NSOperationQueue *op_queue = [[NSOperationQueue alloc] init];
+    
+    op_queue.maxConcurrentOperationCount = 2;
+    
+    [op_queue addOperationWithBlock:^{
+        NSLog(@"操作一：%@", [NSThread currentThread]);
+//        [NSThread sleepForTimeInterval:3.0];
+    }];
+    [op_queue addOperationWithBlock:^{
+        NSLog(@"操作二：%@", [NSThread currentThread]);
+    }];
+    [op_queue addOperationWithBlock:^{
+        NSLog(@"操作三：%@", [NSThread currentThread]);
+    }];
+    [op_queue addOperationWithBlock:^{
+        NSLog(@"操作四：%@", [NSThread currentThread]);
+    }];
+}
+
+- (void)operationDependency
+{
+    NSOperationQueue *op_queue = [[NSOperationQueue alloc] init];
+    
+    NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"操作一：%@", [NSThread currentThread]);
+    }];
+    NSBlockOperation *operation2 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"操作二：%@", [NSThread currentThread]);
+    }];
+    NSBlockOperation *operation3 = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"操作三：%@", [NSThread currentThread]);
+    }];
+    
+    [operation2 addDependency:operation1];
+    [operation3 addDependency:operation2];
+    
+    [op_queue addOperation:operation1];
+    [op_queue addOperation:operation2];
+    [op_queue addOperation:operation3];
 }
 
 #pragma mark - Getter Cycle
@@ -78,5 +265,14 @@
     }
     return _data_array;
 }
+
+//- (NSOperationQueue *)op_queue
+//{
+//    if (!_op_queue)
+//    {
+//        _op_queue = [[NSOperationQueue alloc] init];
+//    }
+//    return _op_queue;
+//}
 
 @end

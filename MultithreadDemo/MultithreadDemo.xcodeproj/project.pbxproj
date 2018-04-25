@@ -12,6 +12,7 @@
 		011571152090FE2F002E9B71 /* DOOperationSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 011571142090FE2F002E9B71 /* DOOperationSectionHeader.m */; };
 		011571182090FECA002E9B71 /* DOOperationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 011571172090FECA002E9B71 /* DOOperationCell.m */; };
 		0115711B2090FF9F002E9B71 /* DOOperationCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115711A2090FF9F002E9B71 /* DOOperationCellModel.m */; };
+		0115711E209108D6002E9B71 /* DOOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0115711D209108D6002E9B71 /* DOOperation.m */; };
 		01A10F89208E63E600382781 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A10F88208E63E600382781 /* AppDelegate.m */; };
 		01A10F91208E63E700382781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01A10F90208E63E700382781 /* Assets.xcassets */; };
 		01A10F94208E63E700382781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A10F92208E63E700382781 /* LaunchScreen.storyboard */; };
@@ -68,6 +69,8 @@
 		011571172090FECA002E9B71 /* DOOperationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOOperationCell.m; sourceTree = "<group>"; };
 		011571192090FF9F002E9B71 /* DOOperationCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOOperationCellModel.h; sourceTree = "<group>"; };
 		0115711A2090FF9F002E9B71 /* DOOperationCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOOperationCellModel.m; sourceTree = "<group>"; };
+		0115711C209108D6002E9B71 /* DOOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DOOperation.h; sourceTree = "<group>"; };
+		0115711D209108D6002E9B71 /* DOOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DOOperation.m; sourceTree = "<group>"; };
 		01A10F84208E63E600382781 /* MultithreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultithreadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01A10F87208E63E600382781 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01A10F88208E63E600382781 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 			children = (
 				011571192090FF9F002E9B71 /* DOOperationCellModel.h */,
 				0115711A2090FF9F002E9B71 /* DOOperationCellModel.m */,
+				0115711C209108D6002E9B71 /* DOOperation.h */,
+				0115711D209108D6002E9B71 /* DOOperation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -580,6 +585,7 @@
 				01A10F97208E63E700382781 /* main.m in Sources */,
 				01A10FE8208E885300382781 /* DOSimulationVC.m in Sources */,
 				01BEDC98208FECFB00AFF6F2 /* DOGCDCell.m in Sources */,
+				0115711E209108D6002E9B71 /* DOOperation.m in Sources */,
 				0115710D2090FD08002E9B71 /* DOOperationVC.m in Sources */,
 				01BEDCA4208FF14D00AFF6F2 /* DOTypeCellModel.m in Sources */,
 				01BEDC95208FECE300AFF6F2 /* DOGCDTableView.m in Sources */,
