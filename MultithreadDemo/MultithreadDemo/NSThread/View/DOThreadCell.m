@@ -27,7 +27,10 @@
 #pragma mark - Life Cycle
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]){}
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
+    {
+        self.textLabel.textColor = [UIColor colorWithRed:30 / 255.0 green:144 / 255.0 blue:255 / 255.0 alpha:1.0];
+    }
     return self;
 }
 

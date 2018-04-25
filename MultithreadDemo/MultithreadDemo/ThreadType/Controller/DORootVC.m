@@ -14,6 +14,7 @@
 #import "DOpthreadVC.h"
 #import "DOThreadVC.h"
 #import "DOGCDVC.h"
+#import "DOOperationVC.h"
 #import "DORunLoopVC.h"
 
 #import "DOTypeListTableView.h"
@@ -94,7 +95,7 @@
         cell_model1.section_title = @"多线程实现方式";
         DOTypeCellModel *cell_model2 = [DOTypeCellModel typeCellModelWithTitle:@"NSThread" pushClass:[DOThreadVC class]];
         DOTypeCellModel *cell_model3 = [DOTypeCellModel typeCellModelWithTitle:@"GCD" pushClass:[DOGCDVC class]];
-        DOTypeCellModel *cell_model4 = [DOTypeCellModel typeCellModelWithTitle:@"NSOperation" pushClass:nil];
+        DOTypeCellModel *cell_model4 = [DOTypeCellModel typeCellModelWithTitle:@"NSOperation" pushClass:[DOOperationVC class]];
         DOTypeCellModel *cell_model5 = [DOTypeCellModel typeCellModelWithTitle:@"NSRunLoop相关" pushClass:[DORunLoopVC class]];
         cell_model5.section_title = @"RunLoop";
         
